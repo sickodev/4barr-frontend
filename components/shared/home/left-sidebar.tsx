@@ -70,7 +70,7 @@ const LeftSidebar = () => {
   }
 
   return (
-    <nav className="w-full h-fit space-y-4">
+    <nav className="w-full h-fit space-y-4 sticky top-0">
       <nav className="hidden md:block p-2 rounded-xl space-y-3 bg-primary-foreground">
         <nav className="border-b hover:bg-secondary hover:text-brand hover:border-b-brand transition ease-linear group p-1">
           <a href="/profile" className="flex space-x-3 ease-linear ">
@@ -148,7 +148,7 @@ const LeftSidebar = () => {
         </nav>
         <div className="space-y-3">
           {topArtists?.map((topArtist, idx) => (
-            <a
+            <a key={idx}
               href="#"
               className="flex items-center justify-between border-b py-1 hover:bg-secondary transition ease-linear hover:text-brand"
             >
